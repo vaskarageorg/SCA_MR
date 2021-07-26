@@ -13,3 +13,8 @@ a)__ Input: Harmonised SNP-X and SNP-Y effect estimates should be provided
 b)__ Sparsity: The estimation of the sparsity parameter is based on publicly available code from the Witten and Tibshirani _PMA_ R package [https://cran.r-project.org/web/packages/PMA/PMA.pdf]. It involves an n-fold cross-validation and a choice of the sparsity parameter that minimises the sum of the squared errors in the left-out data.
 c)__ Causal Estimation: The effect sizes are not readily interpretable as the linear transformations skew the magnitude of the results. Interpretation of the direction and significance of the result, rather than the magnitude of the point estimate, are more intuitive.
 d)__ It is helpful to visualise the transformation procedure with heatmaps.
+
+<ul>
+<li>Line 1</li>
+<li>Line 2</li>
+</ul>
