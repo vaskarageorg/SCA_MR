@@ -9,7 +9,7 @@ b) performs SCA of the SNP-exposure associations and,
 c) in a second step, performs an inverse-variance weighted meta-analysis of the SCA-transformed SNP-exposure data and the SNP-outcome association, in line with the two-sample MR approach [https://academic.oup.com/hmg/article/23/R1/R89/2900899].
 
 Function Information:
-a) Input: Harmonised SNP-X and SNP-Y effect estimates should be provided
-b) Sparsity: The estimation of the sparsity parameter is based on publicly available code from the Witten and Tibshirani _PMA_ R package [https://cran.r-project.org/web/packages/PMA/PMA.pdf]. It involves an n-fold cross-validation and a choice of the sparsity parameter that minimises the sum of the squared errors in the left-out data.
-c) Causal Estimation: The effect sizes are not readily interpretable as the linear transformations skew the magnitude of the results. Interpretation of the direction and significance of the result, rather than the magnitude of the point estimate, are more intuitive.
-d) It is helpful to visualise the transformation procedure with heatmaps.
+\\a) Input: Harmonised SNP-X and SNP-Y effect estimates should be provided
+\\b) Sparsity: The estimation of the sparsity parameter is based on publicly available code from the Witten and Tibshirani _PMA_ R package [https://cran.r-project.org/web/packages/PMA/PMA.pdf]. It involves an n-fold cross-validation and a choice of the sparsity parameter that minimises the sum of the squared errors in the left-out data.
+\\c) Causal Estimation: The effect sizes are not readily interpretable as the linear transformations skew the magnitude of the results. Interpretation of the direction and significance of the result, rather than the magnitude of the point estimate, are more intuitive.
+\\d) It is helpful to visualise the transformation procedure with heatmaps.
