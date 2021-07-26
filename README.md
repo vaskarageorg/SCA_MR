@@ -15,5 +15,5 @@ c) in a second step, performs an inverse-variance weighted meta-analysis of the 
 <li>Causal Estimation: The effect sizes are not readily interpretable as the linear transformations skew the magnitude of the results. Interpretation of the direction and significance of the result, rather than the magnitude of the point estimate, are more intuitive.</li>
 <li>It is helpful to visualise the transformation procedure with heatmaps.</li>
 </ul>
-![alt text](https://github.com/vaskarageorg/SCA_MR/blob/main/heatmap.jpg)
+![plot](https://github.com/vaskarageorg/SCA_MR/blob/main/heatmap.jpg)
 
