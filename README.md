@@ -11,7 +11,7 @@ c) in a second step, performs an inverse-variance weighted meta-analysis of the 
 <b>Function Information:</b>
 <ul>
 <li>Input: Harmonised SNP-X and SNP-Y effect estimates should be provided</li>
-<li>Sparsity: The estimation of the sparsity parameter is based on publicly available code from the Witten and Tibshirani _PMA_ R package [https://cran.r-project.org/web/packages/PMA/PMA.pdf]. It involves an n-fold cross-validation and a choice of the sparsity parameter that minimises the sum of the squared errors in the left-out data.</li>
+<li>Sparsity: The estimation of the sparsity parameter is based on publicly available code from the Witten and Tibshirani  <i>PMA</i> R package [https://cran.r-project.org/web/packages/PMA/PMA.pdf]. It involves an n-fold cross-validation and a choice of the sparsity parameter that minimises the sum of the squared errors in the left-out data.</li>
 <li>Causal Estimation: The effect sizes are not readily interpretable as the linear transformations skew the magnitude of the results. Interpretation of the direction and significance of the result, rather than the magnitude of the point estimate, are more intuitive.</li>
 <li>It is helpful to visualise the transformation procedure with heatmaps.</li>
 </ul>
