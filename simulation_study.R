@@ -1,6 +1,6 @@
 #NOTE: Change the directories and use provided functions
 # source("~/dimred_fns.R")
-# source("~/outc_gen_NULL.R")
+# source("~/outc_gen.R")
 # source("~/correl_exps.R")
 ####################################################################################
 ####################################################################################
