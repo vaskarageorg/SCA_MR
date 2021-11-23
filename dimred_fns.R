@@ -56,11 +56,11 @@ apply_spca_fns = function(betaX,N_PCA){
   pcb1=prcomp(betaX,scale. = T)
   pc_scores=pcb1$x[,1:N_PCA]
   #SCA
-  #scb1=suppressWarnings(suppressMessages(SCA.cv(x = matrix(unlist(betaX),nrow = nrow(betaX)),
-  #                                              N_PC = N_PCA,
-  #                                              length.gamma = 5,nfolds = 5,center = T)))
+  scb1=suppressWarnings(suppressMessages(SCA.cv(x = matrix(unlist(betaX),nrow = nrow(betaX)),
+                                                N_PC = N_PCA,
+                                                length.gamma = 5,nfolds = 5,center = T)))
   scb1_fit=suppressWarnings(suppressMessages(sca(A = matrix(unlist(betaX),nrow = nrow(betaX)),
-                                                 k = N_PCA)))
+                                                 k = N_PCA,gamma = scb1$bestgamma1se)))
   #EN
   spca_en = spca(x = betaX,K = N_PCA,para = rep(round(ncol(betaX)/N_PCA),ncol(betaX)),sparse = 'varnum')
   spca_en_scores=as.matrix(betaX) %*% spca_en$loadings %*% solve((t(spca_en$loadings) %*% spca_en$loadings))
