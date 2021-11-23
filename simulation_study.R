@@ -1,6 +1,10 @@
-source("/lustre/home/vk282/simul_NatC/511/allinc/dimred_fns.R")
-source("/lustre/home/vk282/simul_NatC/511/allinc/NULL/outc_gen_NULL.R")
-source("/lustre/home/vk282/simul_NatC/511/allinc/correl_exps.R")
+#NOTE: Change the directories and use provided functions
+# source("~/dimred_fns.R")
+# source("~/outc_gen_NULL.R")
+# source("~/correl_exps.R")
+####################################################################################
+####################################################################################
+####################################################################################
 library(MendelianRandomization);library(ggplot2);library(epca);library(elasticnet);library(mada);library(tidyverse);library(pcaPP);library(MVMR)
 
 res_list= list();nSim = 1200;Fstat=CFstat=vector(length = nSim)
