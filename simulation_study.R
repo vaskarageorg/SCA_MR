@@ -27,7 +27,7 @@ Y_gen1=outcome_gen(X = X_gen1$X, G = X_gen1$G,
 pcb1=prcomp(X_gen$betaX,scale. = T)
 ##Karlis Saporta Spinakis Criterion: Eigenvalue threshold correction, faster than permutations
 kaiser_v=1+2*sqrt((ncol(X_gen$betaX)-1)/(nrow(X_gen$betaX)-1))
-N_PCA=which(pcb1$sdev^2 > kaiser_v)
+N_PCA=length(which(pcb1$sdev^2 > kaiser_v)) # if respective eigenvalue of PC surpasses KSS criterion value, choose it as informative 
 
 spca_res1=apply_spca_fns(betaX = X_gen$betaX,N_PCA = N_PCA)
 scind=which(str_detect(names(spca_res1),'scores'))
