@@ -4,7 +4,7 @@
 
 library(epca)
 
-sca_MR=function(beta_X_mat, beta_Y_vec, SE_Y_vec, nfold, spars_length){
+sca_MR=function(beta_X_mat, beta_Y_vec, SE_Y_vec, nfold, spars_length, N_PC){
 SCA.cv=function (x, N_PC, length.gamma=10,nfolds = 10, 
                  center = TRUE) 
 {
@@ -58,7 +58,7 @@ SCA.cv=function (x, N_PC, length.gamma=10,nfolds = 10,
                   bestgamma1se = bestgamma1se))
   return(object)
 }
-
+N_PCA=N_PC
 scb1=suppressWarnings(suppressMessages(SCA.cv(x = beta_X_mat,
                                               N_PC = N_PCA,nfolds = nfold,
                                               length.gamma = spars_length,center = T)))
