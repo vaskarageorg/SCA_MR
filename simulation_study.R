@@ -10,6 +10,7 @@ library(MendelianRandomization);library(ggplot2);library(epca);library(elasticne
 res_list= list();nSim = 1200;Fstat=CFstat=vector(length = nSim)
 
 for (l in 1:nSim){
+  #Two-Sample MR Framework: Run the exposure generation twice (two independent samples with the same parameters (same population))
 #First Sample
 #generate 
 nX = sample(seq(41,97),size = 1);nG = sample(seq(153,99),size = 1);nbl1 = sample(5:8,1)
