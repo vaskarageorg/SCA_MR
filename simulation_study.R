@@ -15,18 +15,17 @@ for (l in 1:nSim){
 #generate 
 nX = sample(seq(41,97),size = 1);nG = sample(seq(153,99),size = 1);nbl1 = sample(5:8,1)
 
-#First Sample, SNP-X
+#First Sample, SNP-X associations
 X_gen=correl_expos(nX = nX,nG = nG,nbl1 = nbl1,n_ind = n_ind,sum_stats=T)
 
-#Second Sample
+#Second Sample, generated to then generate the outcome Y
 X_gen1=correl_expos(nX = nX,nG = nG,nbl1 = nbl1,n_ind = n_ind,sum_stats=F)
 Y_gen1=outcome_gen(X = X_gen1$X, G = X_gen1$G,
                    nbl = nbl1,U = X_gen1$U)
 
-#Methods
+#Methods. Collected in one function for sparse PCA
 pcb1=prcomp(X_gen$betaX,scale. = T)
-#pcb_original=prcomp(X,scale. = T)
-##Karlis Saporta Spinakis Criterion
+##Karlis Saporta Spinakis Criterion: Eigenvalue threshold correction, faster than permutations
 kaiser_v=1+2*sqrt((ncol(X_gen$betaX)-1)/(nrow(X_gen$betaX)-1))
 N_PCA=which(pcb1$sdev^2 > kaiser_v)
 
@@ -34,9 +33,7 @@ spca_res1=apply_spca_fns(betaX = X_gen$betaX,N_PCA = N_PCA)
 scind=which(str_detect(names(spca_res1),'scores'))
 load_ind=which(str_detect(names(spca_res1),'loadings'))
 
-spca_res_scores=spca_res1[scind]
-spca_res_load=spca_res1[load_ind]
-
+spca_res_scores=spca_res1[scind]; spca_res_load=spca_res1[load_ind]
 
 # Results
 spca_mv_res = data.frame(matrix(nrow=N_PCA,ncol=length(spca_res_scores)))
