@@ -1,7 +1,7 @@
 # SCA_MR
 Sparse Component Analysis in Mendelian Randomization
 
-This repository includes code on performing sparse component analysis (SCA) [https://arxiv.org/abs/2007.00596], a sparse dimensionality reduction approach shown to perform well in highly correlated data, in summary data of genetic variant-exposure associations, and then use this to investigate potential causal associations with Mendelian Randomization. SCA outperformed other sparse modalities in the authors' simulation studies. 
+This repository includes code on performing sparse component analysis (SCA) [ https://doi.org/10.7554/eLife.80063 ], a sparse dimensionality reduction approach shown to perform well in highly correlated data, in summary data of genetic variant-exposure associations, and then use this to investigate potential causal associations with Mendelian Randomization. SCA outperformed other sparse modalities in the authors' simulation studies. 
 
 We provide a function that 
 a) receives the SNP-exposure and SNP-outcome effect sizes and corresponding standard errors,
